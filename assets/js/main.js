@@ -49,13 +49,13 @@ function buscar(dni){
 
 	for(var i in asientos){
 		 if(asientos[i] != undefined && asientos[i].dni==this.dni){          
-		 var asiento = parseInt(i)+1;          
-		 var nombreBuscado =asientos[i].nombre;          
-		 var apellidoBuscado=asientos[i].apellido; 
-		 var dniBuscado=asientos[i].dni;       
-		document.getElementById("pasajeroBuscado").innerHTML= "<strong>Pasajero: </strong>"+ nombreBuscado+" "+apellidoBuscado +"<br>"+
-															"<strong>Número de DNI: </strong>"+ dniBuscado+"<br>"
-															 +"<strong>Asiento número : </strong>" + asiento;
+		 this.asiento = parseInt(i)+1;          
+		 this.nombreBuscado =asientos[i].nombre;          
+		 this.apellidoBuscado=asientos[i].apellido; 
+		 this.dniBuscado=asientos[i].dni;       
+		document.getElementById("pasajeroBuscado").innerHTML= "<strong>Pasajero: </strong>"+ this.nombreBuscado+" "+this.apellidoBuscado +"<br>"+
+															"<strong>Número de DNI: </strong>"+ this.dniBuscado+"<br>"
+															 +"<strong>Asiento número : </strong>" + this.asiento;
 	}
 }
 }
